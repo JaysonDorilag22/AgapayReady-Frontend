@@ -10,7 +10,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/v1/login`,
+        `/api/v1/login`,
         {
           email,
           password,
