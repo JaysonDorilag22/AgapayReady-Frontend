@@ -24,7 +24,7 @@ export default function Login() {
       );
 
       console.log("Login successful:", response.data);
-
+      window.location.href = "https://youtu.be/dQw4w9WgXcQ?si=NkgC1dkFUDMFNvzK";
       // Redirect or perform any action upon successful login
 
     } catch (error) {
@@ -103,32 +103,3 @@ export default function Login() {
   );
 }
 
-   // <Card>
-    //   <CardContent>
-    //     <Typography variant="h5" component="h2">Login</Typography>
-    //     {error && <Typography variant="body2" color="error">{error}</Typography>}
-    //     <form onSubmit={handleSubmit}>
-    //       <TextField
-    //         value={email}
-    //         label="Email"
-    //         variant="outlined"
-    //         onChange={(e) => setEmail(e.target.value)}
-    //         type="email"
-    //         required
-    //         fullWidth
-    //         margin="normal"
-    //       />
-    //       <TextField
-    //         value={password}
-    //         label="Password"
-    //         variant="outlined"
-    //         onChange={(e) => setPassword(e.target.value)}
-    //         type="password"
-    //         required
-    //         fullWidth
-    //         margin="normal"
-    //       />
-    //       <Button type="submit" variant="outlined" fullWidth>Log in</Button>
-    //     </form>
-    //   </CardContent>
-    // </Card>
