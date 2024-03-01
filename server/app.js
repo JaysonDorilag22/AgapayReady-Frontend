@@ -5,7 +5,7 @@ import cors from 'cors';
 import auth from './routes/auth.route.js'
 export { app };
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: 'https://agapayready-frontend.onrender.com',
     credentials: true}))
 app.use(express.json());
 app.use(cookieParser());
