@@ -1,13 +1,19 @@
 import express from 'express';
 const app = express();
-import cookieParser from 'cookie-parser';
 import cors from 'cors';
-import auth from './routes/auth.route.js'
-export { app };
+import cookieParser from 'cookie-parser';
+import auth from './routes/auth.route.js';
+
 app.use(cors({
     origin: 'https://agapayready-frontend.onrender.com',
-    credentials: true}))
+    credentials: true
+}));
+
 app.use(express.json());
 app.use(cookieParser());
 
+// Handle OPTIONS requests
+app.options('*', cors());
+
 app.use('/api/v1', auth);
+export { app };
