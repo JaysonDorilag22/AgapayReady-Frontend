@@ -9,16 +9,21 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${import.meta.env.VITE_PORT_BACKEND}/api/v1/login`,{ email, password, },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          withCredentials: true,
-        }
-      );
+      const response = await axios.post(`${import.meta.env.VITE_PORT_BACKEND}/api/v1/login`, {
+        email,
+        password,
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,
+      });
 
       console.log("Login successful:", response.data);
+
+      // Store the token in localStorage
+      localStorage.setItem("token", response.data.token);
+
       // Redirect or perform any action upon successful login
     } catch (error) {
       setError(error.response.data.message);
